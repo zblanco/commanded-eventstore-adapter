@@ -39,7 +39,9 @@ defmodule Commanded.EventStore.Adapters.EventStore.Mixfile do
   defp deps do
     [
       {:commanded, ">= 0.19.0", runtime: Mix.env() == :test},
-      {:eventstore, ">= 0.17.0"},
+      {:eventstore,
+        git: "https://github.com/zblanco/eventstore.git",
+        branch: "backward-streaming"},
 
       # Optional dependencies
       {:jason, "~> 1.1", optional: true},
